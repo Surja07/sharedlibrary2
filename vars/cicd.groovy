@@ -13,11 +13,10 @@ def deployment(jobname, ip)
 }
 
 
-def test (jobname) {
-sh """
-javac /var/lib/jenkins/workspace/${jobname}/HelloWorld.java
-java -cp /var/lib/jenkins/workspace/${jobname} HelloWorld > /var/lib/jenkins/workspace/${jobname}/test_output.txt
-"""
+def test (jobname) 
+{
+sh "scp '${env.WORKSPACE}/HelloWorld.java' ubuntu@${ip}:/home/ubuntu/demo3"
+
 }
 
 def release(jobname, ip) {
