@@ -27,6 +27,6 @@ def test(jobname)
 
 def release(jobname, ip) 
 {
-sh "scp '/var/lib/jenkins/workspace/${jobname}/HelloWorld.java' ubuntu@${ip}:/home/ubuntu/demo3"
+sh "scp '/var/lib/jenkins/workspace/${jobname}/HelloWorld.java' ubuntu@${ip}:/home/ubuntu/demo6"
 }
 
