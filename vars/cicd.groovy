@@ -8,7 +8,7 @@ echo 'Building the project using Maven...'
 }
 
 def deployment (jobname, ip) {
-sh "scp /var/lib/jenkins/workspace/${jobname}/HelloWorld.java ubuntu@${ip}:/var/lib/tomcat10/webapps/"
+sh "scp /var/lib/jenkins/workspace/pipeline shared ${jobname}/HelloWorld.java ubuntu@${ip}:/home/ubuntu/demo3"
 }
 
 def test (jobname) {
