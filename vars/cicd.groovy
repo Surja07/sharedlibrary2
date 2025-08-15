@@ -13,9 +13,15 @@ def deployment(jobname, ip)
 }
 
 
-def test (jobname) 
+
+def test(jobname) 
 {
-sh "scp '${env.WORKSPACE}/HelloWorld.java' ubuntu@${ip}:/home/ubuntu/demo3"
+    sh """
+        javac '${env.WORKSPACE}/HelloWorld.java'
+        java -cp '${env.WORKSPACE}' HelloWorld > '${env.WORKSPACE}/test_output.txt'
+    """
+}
+
 
 }
 
