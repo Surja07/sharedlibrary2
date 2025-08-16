@@ -1,8 +1,8 @@
-def git download ('repo')
+def gitdownload ('repo')
 {
   git branch: 'main', url: "https://github.com/Surja07/${repo}.git"
 }
-def mvn build()
+def mvnbuild()
 {
   echo "mvn build package"
 }
