@@ -8,10 +8,10 @@ def sub(a,b)
 }
 def multi(a,b)
 {
-echo "The multi of ${a} and ${b} is ${a*b}"
+echo "The multipication of ${a} and ${b} is ${a*b}"
 }
 
 def div(a,b)
 {
-   echo "The div of ${a} and ${b} is ${a/b}"
+   echo "The divison  of ${a} and ${b} is ${a/b}"
 }
